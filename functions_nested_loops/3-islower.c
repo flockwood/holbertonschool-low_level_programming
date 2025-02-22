@@ -1,20 +1,16 @@
 #include "main.h"
 /**
- * print_alphabet_x10 - print the alphabet x10
+ * _islower - checks for lowercase character.
+ * @c: the character to be checked.
  *
+ * Return: 1 if the character is lowercase, 0 otherwise.
  */
-void print_alphabet_x10(void)
+int _islower(int c)
 {
-	int abc, cou;
-
-	/* This count the amount of time. The alphabet is printed*/
-	cou = 0;
-	while (cou < 10)
+	if (c >= 97 && c <= 122)
 	{
-		/* This print the alphabet with a newline*/
-		for (abc = 'a'; abc <= 'z'; abc++)
-			_putchar(abc);
-		_putchar('\n');
-		cou++;
+		return (1);
 	}
+	else
+		return (0);
 }
