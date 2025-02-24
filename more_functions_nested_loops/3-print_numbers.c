@@ -18,7 +18,6 @@ void print_numbers(void) {
             _putchar('\n'); // Print the newline
         }
     }
-}
 
 int main(void) {
     print_numbers();
