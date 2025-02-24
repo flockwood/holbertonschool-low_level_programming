@@ -1,26 +1,18 @@
 #include "main.h"
 
-/** 
- * print_numbers - prints the numbers from 0 to 9
- * @i: is a char from 0 to 9
- * Return: aleays 0
+/**
+ * print_numbers - Prints numbers from 0 to 9, followed by a new line.
  */
+void print_numbers(void)
+{
+	char num[] = "0123456789";
+	int i = 0;
 
-void _putchar(char c) {
-    putchar(c);
-}
-
-void print_numbers(void) {
-    for (int i = 0; i <= 9; i++) {
-        if (i <= 9) {
-            _putchar(i + '0'); // Print numbers 0-9 without new line
-        
-            _putchar('\n'); // Print the newline
-        }
-    }
-
-int main(void) {
-    print_numbers();
-    return 0;
+	while (num[i] != '\0')
+	{
+		_putchar(num[i]);
+		i++;
+	}
+	_putchar('\n');
 }
 
