@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints the number of command line arguments
+ * main - prints all command line arguments
  * @argc: the argument count
  * @argv: the argument vector
  *
@@ -9,10 +9,13 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argv;  /* Prevent unused variable warning */
+	int i;
 
-	/* Print number of arguments excluding program name */
-	printf("%d\n", argc - 1);
+	/* Loop through all command line arguments */
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);  /* Print each argument on a new line */
+	}
 
 	return (0);
 }
