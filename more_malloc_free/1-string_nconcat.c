@@ -1,51 +1,50 @@
-nclude <stdlib.h>
-#include <string.h>
+#include "main.h"
+#include <stdlib.h>
 
 /**
- *  * string_nconcat - Concatenates two strings up to n bytes of s2.
- *   * @s1: The first string.
- *    * @s2: The second string.
- *     * @n: The number of bytes to concatenate from s2.
- *      *
- *       * Return: A pointer to the newly allocated concatenated string, or NULL if it fails.
- *        */
+ * string_nconcat - Concatenates two strings up to n characters from s2.
+ * @s1: The first string.
+ * @s2: The second string.
+ * @n: The number of characters to concatenate from s2.
+ *
+ * Return: Pointer to newly allocated concatenated string,
+ *         or NULL if memory allocation fails.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	    char *result;
-		    unsigned int len1, len2, i, j;
+	unsigned int len1 = 0, len2 = 0, i, j;
+	char *concat;
 
-			    // If s1 is NULL, treat it as an empty string
-		  //     if (s1 == NULL)
-	  //             s1 = "";
-	//
-  //                 // If s2 is NULL, treat it as an empty string
-  //                     if (s2 == NULL)
-  //                             s2 = "";
-  //
-  //                                 // Get the lengths of s1 and s2
-  //                                     len1 = strlen(s1);
-  //                                         len2 = strlen(s2);
-  //
-  //                                             // If n is greater than or equal to len2, use the entire string s2
-  //                                                 if (n >= len2)
-  //                                                         n = len2;
-  //
-  //                                                             // Allocate memory for the result string (len1 + n + 1 for null terminator)
-  //                                                                 result = malloc(len1 + n + 1);
-  //                                                                     if (result == NULL)
-  //                                                                             return (NULL);
-  //
-  //                                                                                 // Copy s1 into result
-  //                                                                                     for (i = 0; i < len1; i++)
-  //                                                                                             result[i] = s1[i];
-  //
-  //                                                                                                 // Copy the first n bytes of s2 into result
-  //                                                                                                     for (j = 0; j < n; j++)
-  //                                                                                                             result[i + j] = s2[j];
-  //
-  //                                                                                                                 // Null-terminate the result
-  //                                                                                                                     result[i + j] = '\0';
-  //
-  //                                                                                                                         return result;
-  //                                                                                                                         }
-  //
+	if (s1 == NULL)
+		s1 = ""; /* Treat NULL as empty string */
+	if (s2 == NULL)
+		s2 = ""; /* Treat NULL as empty string */
+
+	/* Calculate lengths of s1 and s2 */
+	while (s1[len1] != '\0')
+		len1++;
+	while (s2[len2] != '\0')
+		len2++;
+
+	/* If n is greater than s2's length, use full s2 */
+	if (n > len2)
+		n = len2;
+
+	/* Allocate memory for new string */
+	concat = malloc(sizeof(char) * (len1 + n + 1));
+	if (concat == NULL)
+		return (NULL);
+
+	/* Copy s1 into concat */
+	for (i = 0; i < len1; i++)
+		concat[i] = s1[i];
+
+	/* Copy n characters from s2 */
+	for (j = 0; j < n; j++, i++)
+		concat[i] = s2[j];
+
+	concat[i] = '\0'; /* Null-terminate the string */
+
+	return (concat);
+}
+
