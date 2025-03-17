@@ -1,5 +1,16 @@
 #include "function_pointers.h"
 
+/**
+ * int_index - Searches for an int in an array using a fx pointer
+ * @array: the array we are searching
+ * @size: the num of elements in the array
+ * @cmp: a pointer to the fx to compare values
+ *
+ * Return: the index of the first matching element,
+ *         or -1 if no match is found or if size is <= 0
+ */
+
+
 
 
 
