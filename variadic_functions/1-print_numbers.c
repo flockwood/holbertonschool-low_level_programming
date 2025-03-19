@@ -6,6 +6,8 @@
  * print_numbers - Prints numbers, followed by a new line
  * separator: the string to be printed between numbers
  * @n: the number of integers passed to the function
+ *
+ * Description: If separator is NULL, don't print it
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
