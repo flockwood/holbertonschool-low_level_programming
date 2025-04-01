@@ -1,6 +1,7 @@
 #include "lists.h"
 
-/** list_len - returns the number of elements in a line list_t list
+/**
+ * list_len - returns the number of elements in a line list_t list
  * @h: pointer to the head of the list
  *
  * Return: the number of elements on the list
