@@ -7,7 +7,7 @@
  * @head: Pointer to the pointer of the head of the list
  * @str: String to be duplicated and added to the new node
  *
- * Retur: The address of the new element, or NULL if it fails
+ * Return: The address of the new element, or NULL if it fails
  */
 
 list_t *add_node_end(list_t **head, const char *str)
