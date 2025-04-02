@@ -4,8 +4,6 @@
  * dlistint_len - Counts the number of elements in a dlistint_t list
  * @h: Pointer to the head of the doubly linked list
  *
- * Return: The number of the head of the doubly linked list
- *
  * Return: The number of elements in the list
  */
 
