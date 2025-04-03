@@ -11,13 +11,6 @@
 
 #define BUFFER_SIZE 1024
 
-/**
- * error_exit - Handles error messages and exits with a specific code.
- * @exit_code: The exit code.
- * @message: The error message to print.
- * @file_name: The file name to include in the error message.
- */
-
 
 int _putchar(int c);
 ssize_t read_textfile(const char *filename, size_t letters);
